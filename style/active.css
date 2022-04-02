@@ -1,0 +1,100 @@
+@keyframes left-to-right {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+@media (max-width: 768px) {
+  body.active {
+    background: #000000;
+    transition: 0.45s ease-in 100ms;
+  }
+  .wrapper.active {
+    background-color: white;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .hamburger span:nth-child(1).active {
+    transform: rotate(45deg) translate(0, 8px);
+  }
+  .hamburger span:nth-child(2).active {
+    transform: translateX(-100px);
+    background: transparent;
+  }
+  .hamburger span:nth-child(3).active {
+    transform: rotate(-45deg) translate(1px, -8px);
+  }
+
+  .products-menu.active {
+    animation: left-to-right 0.6s ease-in-out forwards;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 6.4vw;
+    width: 89.7135417vw;
+    text-align: center;
+    padding: 8.8vw 6.4vw;
+    margin-top: 11.5vw;
+    z-index: 10;
+    position: fixed;
+    border-radius: 1.041666vw;
+    top: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .products-menu.active h6 {
+    margin: 0;
+    font-size: 1.953125vw;
+    line-height: 0.02667969vw;
+    letter-spacing: 0.00139323vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .products-menu.active {
+    animation: left-to-right 0.6s ease-out forwards;
+    display: block;
+    padding: 0 6.4vw;
+    width: 87.2vw;
+    text-align: center;
+    padding: 8.8vw 6.4vw;
+    margin-top: 20.26666vw;
+    z-index: 10;
+    position: fixed;
+    border-radius: 2.133333vw;
+    top: 0;
+    bottom: 22%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .products-menu.active h6 {
+    margin: 0;
+    font-size: 4vw;
+    line-height: 5.464vw;
+    letter-spacing: 0.28533333vw;
+  }
+  .hamburger span:nth-child(1).active {
+    transform: rotate(45deg) translate(0, 8px);
+  }
+  .hamburger span:nth-child(2).active {
+    transform: translateX(-100px);
+    background: transparent;
+  }
+  .hamburger span:nth-child(3).active {
+    transform: rotate(-45deg) translate(0px, -8px);
+  }
+}

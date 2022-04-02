@@ -1,0 +1,1141 @@
+.loader {
+  background-color: black;
+  width: 100%;
+  height: 100vw;
+  position: fixed;
+  z-index: 1003;
+}
+.cd-transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.cd-transition-layer .bg-layer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-2%);
+  transform: translateY(-50%) translateX(-2%);
+  height: 100%;
+  /* our sprite is composed of 25 frames */
+  width: 2500%;
+}
+.bg-layer img {
+  width: 100%;
+  position: fixed;
+  height: 100%;
+}
+.cd-transition-layer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cd-transition-layer.opening .bg-layer {
+  animation: cd-sequence 1s steps(24);
+  animation-fill-mode: forwards;
+}
+
+.cd-transition-layer.closing .bg-layer {
+  animation: cd-sequence-reverse 1s steps(24);
+  animation-fill-mode: forwards;
+}
+
+.no-cssanimations .cd-transition-layer {
+  display: none;
+}
+
+@keyframes cd-sequence {
+  0% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+}
+
+@keyframes cd-sequence-reverse {
+  0% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+.sticky {
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.sticky a {
+  font-size: 0.90277778vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+header {
+  height: 50.625vw;
+  background-color: black;
+  color: white;
+  background-image: url(/images/hero.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header a {
+  font-size: 0.90277778vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+.hamburger {
+  display: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+nav {
+  padding-top: 2.22vw;
+  margin: 0 auto;
+  width: 77.014vw;
+  display: flex;
+  justify-content: space-between;
+}
+.logo,
+.logo-foot {
+  width: 9.9305556vw;
+}
+
+.main-header {
+  width: 27.639vw;
+  padding-top: 8.8888vw;
+  padding-left: 11.46vw;
+}
+.main-header span {
+  color: rgba(255, 255, 255, 1);
+  opacity: 0.5;
+  font-size: 0.97222222vw;
+  line-height: 1.319vw;
+  letter-spacing: 0.69444vw;
+  text-transform: uppercase;
+}
+.main-header h1 {
+  margin: 1.66666667vw 0;
+  font-size: 3.889vw;
+  text-transform: uppercase;
+}
+.main-header p {
+  margin: 0;
+  padding-right: 3.40277778vw;
+  font-size: 1.04166667vw;
+  line-height: 1.73611111vw;
+  color: rgba(255, 255, 255, 1);
+  opacity: 0.75;
+}
+.btn {
+  cursor: pointer;
+  margin-top: 3.05555556vw;
+  width: fit-content;
+  font-size: 0.902778vw;
+  padding: 1.15384em 2.307692em;
+  background-color: rgb(216, 125, 74);
+  letter-spacing: 0.0694444vw;
+  transition: background-color 0.25s ease-in-out 100ms;
+}
+.btn:hover {
+  background-color: rgba(251, 175, 133, 1);
+}
+
+.nav-content a {
+  margin: 0 1.18vw;
+  transition: color 0.25s ease-in-out;
+}
+.nav-content a:hover {
+  color: rgba(216, 125, 74, 1);
+}
+hr {
+  width: 77.014vw;
+  margin: 2.22222vw auto 0;
+  opacity: 0.2;
+}
+.products {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 11.4583333vw;
+  width: 77.0833333vw;
+  margin-top: 5.27777778vw;
+}
+.products-menu {
+  display: none;
+}
+.products h6 {
+  margin: 0;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.25vw;
+  line-height: 1.70763889vw;
+  letter-spacing: 0.08958333vw;
+}
+.products-menu h6 {
+  margin: 0;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.25vw;
+  line-height: 1.70763889vw;
+  letter-spacing: 0.08958333vw;
+}
+.containers {
+  width: 24.3055556vw;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.store {
+  color: rgba(0, 0, 0, 1);
+  font-size: 0.90277778vw;
+  line-height: 1.23333333vw;
+  letter-spacing: 0.06944444vw;
+  margin-top: 1.04166667vw;
+}
+.store:hover {
+  color: rgba(216, 125, 74, 1);
+}
+
+.arrow {
+  color: rgba(216, 125, 74, 1);
+}
+.headphones {
+  width: 8.53819444vw;
+}
+.speakers {
+  width: 8.43680556vw;
+  margin-top: 0.52083333vw;
+}
+.earphones {
+  margin-top: 0.9375vw;
+  width: 8.68055556vw;
+}
+
+.headphone {
+  background-color: rgba(241, 241, 241, 1);
+  margin-top: -5.55555556vw;
+  padding-top: 8.05555556vw;
+  padding-bottom: 2.08333333vw;
+  border-radius: 0.55555556vw;
+}
+
+.speaker {
+  background-color: rgba(241, 241, 241, 1);
+  margin-top: -5.03472222vw;
+  padding-top: 8.05555556vw;
+  padding-bottom: 2.08333333vw;
+  border-radius: 0.55555556vw;
+}
+
+.earphone {
+  background-color: rgba(241, 241, 241, 1);
+  margin-top: -4.09722222vw;
+  padding-top: 8.05555556vw;
+  padding-bottom: 2.08333333vw;
+  border-radius: 0.55555556vw;
+}
+.zx9 {
+  display: flex;
+  width: 77.0833333vw;
+  margin: 11.6666667vw auto 0;
+  background-color: rgba(216, 125, 74, 1);
+  border-radius: 0.55555556vw;
+  color: white;
+  background-image: url(/images/circles.png);
+  background-repeat: no-repeat;
+}
+.zx9 img {
+  width: 28.488194vw;
+  padding-left: 8.15972222vw;
+  padding-top: 6.66666667vw;
+}
+.zx9-content {
+  width: 24.2361111vw;
+  padding: 9.23611111vw 6.59722222vw 8.61111111vw 9.58333333vw;
+}
+.zx9-content h1 {
+  margin: 0;
+  padding-right: 6.11111111vw;
+  font-size: 3.88888889vw;
+  line-height: 4.02777778vw;
+  letter-spacing: 0.13888889vw;
+  text-transform: uppercase;
+}
+.zx9-content p {
+  font-size: 1.04166667vw;
+  line-height: 1.73611111vw;
+  opacity: 0.75;
+  margin: 0;
+  margin-top: 1.66666667vw;
+}
+.zx9-content a {
+  display: block;
+  margin-top: 2.77777778vw;
+  width: fit-content;
+  padding: 1.04166667vw 2.118055vw;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  font-size: 0.90277778vw;
+  line-height: 1.23333333vw;
+  letter-spacing: 0.06944444vw;
+}
+.zx9-content a:hover {
+  transition: background-color 0.25s ease-in-out 100ms;
+  background-color: white;
+  color: black;
+  transition: color 0.25s ease-in-out 100ms;
+}
+.zx7 {
+  width: 77.08333vw;
+  background-image: url(/images/zx7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3.333333vw auto;
+  border-radius: 0.5555556vw;
+}
+.zx7-content {
+  width: 14.166667vw;
+  padding: 7.0138889vw 0 7.0138889vw 6.597222vw;
+  text-transform: uppercase;
+}
+.zx7-content h4 {
+  font-size: 1.944444vw;
+  line-height: 2.65625vw;
+  letter-spacing: 0.1388889vw;
+}
+.zx7-content a {
+  display: block;
+  margin-top: 2.2222vw;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9027778vw;
+  line-height: 1.233333vw;
+  letter-spacing: 0.069444vw;
+  border: 0.069444vw solid rgba(0, 0, 0, 1);
+  padding: 1.0416667vw 2.0833333vw;
+}
+.bttn {
+  margin-right: 2.951388vw;
+  white-space: nowrap;
+}
+.zx7-content a:hover {
+  transition: background-color 0.25s ease-in-out 100ms;
+  transition: color 0.25s ease-in-out 100ms;
+  color: white;
+  background-color: black;
+}
+.yx1 {
+  display: flex;
+  justify-content: space-between;
+  width: 77.0833333vw;
+  margin: 3.333333vw auto 0;
+}
+.yx1 img {
+  width: 37.5vw;
+}
+.yx1-content {
+  border-radius: 0.5555556vw;
+  background-color: rgba(241, 241, 241, 1);
+  width: 17.15277vw;
+  padding: 7.0138888vw 13.75vw 7.0138888vw 6.5972222vw;
+  text-transform: uppercase;
+}
+.yx1-content h4 {
+  font-size: 1.944444vw;
+  line-height: 2.65625vw;
+  letter-spacing: 0.1388889vw;
+  margin: 0;
+}
+.yx1-content a {
+  display: block;
+  text-decoration: none;
+  margin-top: 2.222222vw;
+  color: rgba(0, 0, 0, 1);
+  border: 0.069444vw solid rgb(0, 0, 0);
+  padding: 1.0416667vw 2.083333vw;
+  font-size: 0.902777vw;
+  line-height: 1.233333vw;
+  letter-spacing: 0.069444vw;
+}
+.yx1-content a:hover {
+  transition: background-color 0.25s ease-in-out 100ms;
+  transition: color 0.25s ease-in-out 100ms;
+  color: white;
+  background-color: black;
+}
+.button {
+  margin-right: 5.9375vw;
+  white-space: nowrap;
+}
+.description {
+  width: 77.08333vw;
+  margin: 13.888889vw 11.458333vw 0;
+  background-image: url(/images/lisMus.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.description-content {
+  color: black;
+  margin-right: 8.680555vw;
+  padding: 10.208333vw 0;
+  width: 30.902778vw;
+}
+.description-content span {
+  color: rgb(216, 125, 74);
+}
+.description-content h2 {
+  text-transform: uppercase;
+  font-size: 2.777777vw;
+  line-height: 3.055555vw;
+  letter-spacing: 0.099305vw;
+  margin: 0;
+}
+.description-content p {
+  opacity: 0.5;
+  margin-top: 2.22222vw;
+  font-size: 1.041666vw;
+  line-height: 1.7361111vw;
+}
+footer {
+  background-color: rgb(16, 16, 16);
+  margin-top: 13.8888vw;
+}
+.foot-nav {
+  padding-top: 5.2083333vw;
+  color: white;
+  margin: 0 11.458333vw;
+}
+.foot-nav-content a {
+  font-size: 0.90277vw;
+  line-height: 1.73611vw;
+  letter-spacing: 0.13888vw;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  margin-left: 2.36111vw;
+}
+.foot-nav-content a:hover {
+  transition: color 0.25s ease-in-out 100ms;
+  color: rgba(216, 125, 74, 1);
+}
+.foot-content {
+  width: 77.08333vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.04166vw;
+  line-height: 1.736111vw;
+}
+.conclusion {
+  margin-top: 2.5vw;
+  color: white;
+  opacity: 0.5;
+  width: 37.5vw;
+}
+.copyright {
+  margin-bottom: 3.333333vw;
+}
+.logos {
+  display: flex;
+  margin-top: 7.291666vw;
+  justify-content: flex-end;
+}
+.twitter {
+  margin: 0 1.11111vw;
+}
+path:hover {
+  fill: rgb(216, 125, 74);
+}
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .loader {
+    height: 100%;
+  }
+  header {
+    height: 94.921875vw;
+    background-image: url(/images/heroTab.png);
+    background-position: bottom center;
+  }
+  .hamburger {
+    display: block;
+    padding-right: 5.46875vw;
+    width: 1em;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 1em;
+    height: 0.1875em;
+    background-color: white;
+    margin-top: 0.1875em;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav {
+    padding-top: 4.1667vw;
+    margin: 0 auto;
+    width: 89.7135417vw;
+  }
+  .logo,
+  .logo-foot {
+    padding-right: 56.640625vw;
+    width: 18.6197317vw;
+  }
+  .nav-content {
+    display: none;
+  }
+  .main-header {
+    padding-left: 0;
+    padding-top: 29.40625vw;
+    padding-bottom: 21.744917vw;
+    width: 49.34895vw;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .main-header span {
+    font-size: 1.82291667vw;
+    line-height: 2.47395833vw;
+    letter-spacing: 1.3020833vw;
+  }
+  .main-header h1 {
+    margin-top: 3.125vw;
+    margin-bottom: 0;
+    font-size: 7.291667vw;
+    line-height: 7.5520833vw;
+    letter-spacing: 0.2604166vw;
+  }
+  .main-header p {
+    padding: 0 1.953125vw;
+    font-size: 1.953125vw;
+    line-height: 3.25520833vw;
+  }
+  .btn {
+    margin: 5.2083333vw auto 0;
+    font-size: 1.69270833vw;
+    line-height: 2.3125vw;
+    letter-spacing: 0.13020833vw;
+  }
+  header a {
+    font-size: 1.69270833vw;
+  }
+  hr {
+    width: 89.7135417vw;
+    margin-top: 4.1666667vw;
+  }
+  .products {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5.20833333vw;
+    width: 89.7135417vw;
+    margin-top: 12.5vw;
+  }
+  .products h6 {
+    margin: 0;
+    font-size: 1.953125vw;
+    line-height: 0.02667969vw;
+    letter-spacing: 0.00139323vw;
+  }
+
+  .products-menu {
+    right: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 6.4vw;
+    width: 89.7135417vw;
+    text-align: center;
+    padding: 8.8vw 6.4vw;
+    margin-top: 12.5vw;
+    z-index: 10;
+    position: fixed;
+    border-radius: 1.041666vw;
+    top: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .products-menu h6 {
+    margin: 0;
+    font-size: 1.953125vw;
+    line-height: 0.02667969vw;
+    letter-spacing: 0.00139323vw;
+  }
+  .containers {
+    width: 29.0364583vw;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .store {
+    font-size: 1.69270833vw;
+    line-height: 2.3125vw;
+    letter-spacing: 0.13020833vw;
+    margin-top: 2.21354167vw;
+  }
+  .headphones {
+    width: 10.40625vw;
+  }
+  .speakers {
+    width: 10.9427083vw;
+  }
+  .earphones {
+    width: 13.4114583vw;
+    margin-top: 0;
+  }
+
+  .headphone {
+    margin-top: -6.77083333vw;
+    padding-top: 11.4583333vw;
+    padding-bottom: 2.86458333vw;
+    border-radius: 1.04166667vw;
+  }
+
+  .speaker {
+    margin-top: -6.70572917vw;
+    padding-top: 11.4583333vw;
+    padding-bottom: 2.86458333vw;
+    border-radius: 1.04166667vw;
+  }
+
+  .earphone {
+    margin-top: -6.77083333vw;
+    padding-top: 11.4583333vw;
+    padding-bottom: 2.86458333vw;
+    border-radius: 1.04166667vw;
+  }
+  .zx9 {
+    display: block;
+    width: 89.7135417vw;
+    margin: 12.5vw auto 0;
+    border-radius: 1.04166667vw;
+    background-image: url(/images/circlesTab.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: contain;
+  }
+  .zx9 img {
+    width: 25.6861979vw;
+    margin-top: 6.77083333vw;
+    padding: 0;
+  }
+  .zx9-content {
+    width: 45.4427083vw;
+    padding: 8.33333333vw 22.1354167vw;
+  }
+  .zx9-content h1 {
+    font-size: 7.29166667vw;
+    line-height: 7.55208333vw;
+    letter-spacing: 0.26041667vw;
+    padding: 0;
+  }
+  .zx9-content p {
+    margin-top: 3.125vw;
+    font-size: 1.953125vw;
+    line-height: 3.25520833vw;
+  }
+  .zx9-content a {
+    margin: 5.20833333vw auto 0;
+    font-size: 1.692708vw;
+    line-height: 2.3125vw;
+    letter-spacing: 0.13020833vw;
+    padding: 1.953125vw 4.03645833vw;
+  }
+  .zx7 {
+    border-radius: 1.04166667vw;
+    width: 89.71354vw;
+    background-image: url(/images/zx7Tab.png);
+    background-repeat: no-repeat;
+    margin: 4.166666vw auto 0;
+  }
+  .zx7-content {
+    width: 26.5625vw;
+    padding: 13.15104vw 0 13.15104vw 8.33333vw;
+  }
+  .zx7-content h4 {
+    margin: 0;
+    font-size: 3.645833vw;
+    line-height: 4.9804687vw;
+    letter-spacing: 0.2604166vw;
+  }
+  .zx7-content a {
+    display: block;
+    margin-top: 4.16666vw;
+    font-size: 1.692708vw;
+    line-height: 2.3125vw;
+    letter-spacing: 0.1302083vw;
+    border: 0.1302083vw solid rgba(0, 0, 0, 1);
+    padding: 1.953125vw 3.90625vw;
+  }
+  .bttn {
+    margin-right: 5.46875vw;
+  }
+  .yx1 {
+    border-radius: 1.04166667vw;
+    width: 89.71354vw;
+    margin: 4.166666vw auto 0;
+  }
+  .yx1 img {
+    width: 44.140625vw;
+  }
+  .yx1-content {
+    width: 32.16145vw;
+    padding: 13.15104vw 6.640625vw 13.15104vw 5.338541vw;
+    text-transform: uppercase;
+  }
+  .yx1-content h4 {
+    font-size: 3.64583vw;
+    line-height: 4.980468vw;
+    letter-spacing: 0.2604166vw;
+    margin: 0;
+  }
+  .yx1-content a {
+    margin-top: 4.16666vw;
+    border: 0.130208vw solid rgb(0, 0, 0);
+    padding: 1.953125vw 3.90625vw;
+    font-size: 1.692708vw;
+    line-height: 2.234375vw;
+    letter-spacing: 0.130208vw;
+  }
+  .button {
+    margin-right: 11.13281vw;
+  }
+  .description {
+    width: 89.713541vw;
+    margin: 12.5vw 5.208333vw 0;
+    border-radius: 1.041667vw;
+    background-image: url(/images/lisMusTab.png);
+    background-position: top;
+  }
+  .description-content {
+    text-align: center;
+    margin: 0;
+    margin: 8.20312vw auto 0;
+    padding-top: 47.26562vw;
+    width: 74.609375vw;
+  }
+  .description-content h2 {
+    font-size: 5.208333vw;
+    line-height: 5.72916667vw;
+    letter-spacing: 0.186197vw;
+    margin: 0;
+  }
+  .description-content p {
+    margin-top: 4.16666vw;
+    font-size: 1.953125vw;
+    line-height: 3.2552083vw;
+  }
+  footer {
+    margin-top: 0;
+  }
+  .foot-nav {
+    width: 89.713541vw;
+    padding-top: 7.8125vw;
+    margin: 0 5.20833vw;
+    display: block;
+  }
+  .foot-nav-content {
+    margin-top: 4.16666vw;
+  }
+  .foot-nav-content a {
+    margin: 0;
+    margin-right: 4.42708vw;
+    font-size: 1.6927083vw;
+    line-height: 3.2552083vw;
+    letter-spacing: 0.260416vw;
+  }
+  .foot-content {
+    flex-direction: column;
+    width: 89.71354vw;
+    margin: 0 5.208333vw;
+    font-size: 1.95312vw;
+    line-height: 3.2552vw;
+  }
+  .conclusion {
+    width: 89.71354vw;
+    margin-top: 4.16666vw;
+  }
+  .conclusion p {
+    margin: 0;
+  }
+  .copyright {
+    width: 33.59375vw;
+    margin-top: 10.4166vw;
+  }
+  .logos {
+    display: flex;
+    margin: -5.98958vw 0 5.98958vw 0;
+    justify-content: flex-end;
+  }
+  .twitter {
+    margin: 0 2.083333vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .loader {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1003;
+  }
+  header {
+    height: 160vw;
+    background-size: cover;
+  }
+  .hamburger {
+    display: block;
+    padding-right: 0;
+    width: 6.4vw;
+  }
+  .hamburger span {
+    display: block;
+    width: 4.266vw;
+    background-color: white;
+    margin-top: 0.8vw;
+  }
+
+  nav {
+    padding-top: 8.533333vw;
+    margin: 0 auto;
+    width: 87.2vw;
+  }
+  .logo,
+  .logo-foot {
+    width: 38.133333vw;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .nav-content {
+    display: none;
+  }
+
+  .main-header {
+    padding-left: 0;
+    padding-top: 42.8vw;
+    padding-bottom: 29.8666667vw;
+    width: 87.46666667vw;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .main-header span {
+    font-size: 3.73333333vw;
+    line-height: 5.09866667vw;
+    letter-spacing: 2.66666667vw;
+  }
+  .main-header h1 {
+    margin-top: 4.26666667vw;
+    margin-bottom: 0;
+    font-size: 9.6vw;
+    line-height: 10.6666667vw;
+    letter-spacing: 0.344vw;
+  }
+  .main-header p {
+    padding: 0;
+    font-size: 4vw;
+    line-height: 6.66666667vw;
+  }
+  .btn {
+    margin: 7.46666667vw auto 0;
+    font-size: 3.46666667vw;
+    line-height: 4.736vw;
+    letter-spacing: 0.26666667vw;
+  }
+  header a {
+    font-size: 3.46666667vw;
+  }
+  hr {
+    width: 87.2vw;
+    margin-top: 8.53333333vw;
+  }
+  .products {
+    display: block;
+    padding: 0 6.4vw;
+    width: 87.2vw;
+    margin-top: 10.66666667vw;
+    text-align: center;
+  }
+  .products h6 {
+    margin: 0;
+    font-size: 4vw;
+    line-height: 5.464vw;
+    letter-spacing: 0.28533333vw;
+  }
+  .products-menu {
+    display: none;
+  }
+
+  button {
+    border: none;
+  }
+
+  .containers {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .store {
+    font-size: 3.46666667vw;
+    line-height: 4.736vw;
+    letter-spacing: 0.26666667vw;
+    margin-top: 4.53333333vw;
+  }
+  .headphones {
+    width: 19.4453333vw;
+  }
+  .speakers {
+    width: 22.4106667vw;
+    margin-top: 4.26666667vw;
+  }
+  .earphones {
+    width: 27.4666667vw;
+    margin-top: 0;
+    margin-top: 4.26666667vw;
+  }
+
+  .headphone {
+    margin-top: -13.86666667vw;
+    padding-top: 23.46666667vw;
+    padding-bottom: 5.86666667vw;
+    border-radius: 2.133333333vw;
+  }
+
+  .speaker {
+    margin-top: -13.86666667vw;
+    padding-top: 23.46666667vw;
+    padding-bottom: 5.86666667vw;
+    border-radius: 2.133333333vw;
+  }
+
+  .earphone {
+    margin-top: -13.86666667vw;
+    padding-top: 23.46666667vw;
+    padding-bottom: 5.86666667vw;
+    border-radius: 2.133333333vw;
+  }
+  .zx9 {
+    display: block;
+    width: 87.2vw;
+    margin: 31.4666667vw auto 0;
+    border-radius: 2.13333333vw;
+    background-image: url(/images/circlesMob.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: contain;
+    padding: 14.666vw 0;
+  }
+  .zx9 img {
+    width: 45.9333333vw;
+    padding: 0;
+  }
+  .zx9-content {
+    width: 74.6666667vw;
+    padding: 0;
+    margin: 8.53333333vw auto 0;
+  }
+  .zx9-content h1 {
+    margin: 0 auto;
+    max-width: 44.8vw;
+    font-size: 9.6vw;
+    line-height: 10.666667vw;
+    letter-spacing: 0.344vw;
+    padding: 0;
+  }
+  .zx9-content p {
+    margin-top: 6.4vw;
+    font-size: 4vw;
+    line-height: 6.66666667vw;
+  }
+  .zx9-content a {
+    margin: 6.4vw auto 0;
+    font-size: 3.466666667vw;
+    line-height: 4.736vw;
+    letter-spacing: 0.26666667vw;
+    padding: 4vw 8vw;
+  }
+  .zx7 {
+    border-radius: 2.13333333vw;
+    width: 87.2vw;
+    background-image: url(/images/zx7Mob.png);
+    background-size: contain;
+    margin: 6.4vw auto 0;
+  }
+  .zx7-content {
+    margin: 0;
+    width: 54.4vw;
+    padding: 26.93333vw 26.4vw 26.93333vw 6.4vw;
+  }
+  .zx7-content h4 {
+    margin: 0;
+    font-size: 7.466666vw;
+    line-height: 10.2vw;
+    letter-spacing: 0.533333vw;
+  }
+  .zx7-content a {
+    margin-top: 8.53333vw;
+    font-size: 3.466666vw;
+    line-height: 4.736vw;
+    letter-spacing: 0.266666vw;
+    border: 0.266666vw solid rgba(0, 0, 0, 1);
+    padding: 4vw 8vw;
+  }
+  .bttn {
+    margin-right: 11.33333vw;
+  }
+
+  .yx1 {
+    border-radius: 2.13333333vw;
+    display: block;
+    width: 87.2vw;
+    margin: 6.4vw auto 0;
+    text-align: center;
+  }
+  .yx1 img {
+    width: 87.2vw;
+  }
+
+  .yx1-content {
+    border-radius: 2.13333333vw;
+    margin-top: 6.4vw;
+    background-color: rgba(241, 241, 241, 1);
+    width: 65.86666vw;
+    padding: 10.933333vw 14.93333vw 10.933333vw 6.4vw;
+    text-transform: uppercase;
+  }
+  .yx1-content h4 {
+    font-size: 7.46666vw;
+    line-height: 10.2vw;
+    letter-spacing: 0.533333vw;
+    margin: 0;
+  }
+  .yx1-content a {
+    margin-top: 8.53333vw;
+    border: 0.266666vw solid rgb(0, 0, 0);
+    padding: 4vw 8vw;
+    font-size: 3.466666vw;
+    line-height: 4.736vw;
+    letter-spacing: 0.266666vw;
+  }
+  .button {
+    margin-right: 22.8vw;
+  }
+  .description {
+    width: 87.2vw;
+    margin: 32vw 6.4vw 0;
+    background-image: url(/images/lisMusMob.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 2.13333vw;
+  }
+  .description-content {
+    text-align: center;
+    margin: 0;
+    width: 87.2vw;
+    padding-top: 90.666667vw;
+  }
+  .description-content h2 {
+    font-size: 7.466666vw;
+    line-height: 10.2vw;
+    letter-spacing: 0.266666vw;
+    margin: 0;
+  }
+  .description-content p {
+    margin-top: 8.53333vw;
+    font-size: 4vw;
+    line-height: 6.666667vw;
+  }
+  footer {
+    margin-top: 32vw;
+  }
+  .logo-foot {
+    text-align: center;
+  }
+  .foot-nav {
+    width: 89.713541vw;
+    padding-top: 13.86666vw;
+    margin: 0 5.20833vw;
+    display: block;
+  }
+  .foot-nav-content {
+    margin-top: 8.533333vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .foot-nav-content a {
+    margin: 0;
+    margin-right: 0;
+    margin-top: 4.26666vw;
+    font-size: 3.466666vw;
+    line-height: 6.666666vw;
+    letter-spacing: 0.533333vw;
+  }
+  .foot-content {
+    width: 87.2vw;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    margin: 12.8vw 6.4vw 0;
+    font-size: 4vw;
+    line-height: 6.66666vw;
+  }
+  .conclusion {
+    width: 87.2vw;
+    margin-top: 4.16666vw;
+  }
+  .conclusion p {
+    margin: 0;
+  }
+  .copyright {
+    width: 68.8vw;
+    margin: 12.8vw auto 0;
+  }
+  .logos {
+    width: 27.7333vw;
+    display: flex;
+    margin: 12.8vw auto;
+    justify-content: center;
+  }
+  .twitter {
+    margin: 0 4.26666vw;
+  }
+  .cart img {
+    width: 6.21866vw;
+  }
+  .hamburger img {
+    width: 4.2666vw;
+  }
+  .logo img {
+    width: 38.133333vw;
+  }
+  .logo-foot img {
+    width: 38.133333vw;
+  }
+}
