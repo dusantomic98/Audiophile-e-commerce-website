@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XX99-Mark2</title>
-    <link rel="stylesheet" href="./xx99-mark2.css" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/checkout.css" />
     <link rel="stylesheet" href="../style/active.css">
     <script src="../app.js" defer></script>
-    <script src="../quant.js" defer></script>
     <script src="../node_modules/jquery/src/jquery.js"></script>
     <script src="../jquery-3.6.0.min.js"></script>
   </head>
@@ -37,16 +36,19 @@
 
           <a href="/headphones/headphones.html">Headphones</a>
 
-          <a href="../speakers/speakers.html">Speakers</a>
+          <a href="/speakers/speakers.html">Speakers</a>
 
           <a href="/earphones/earphones.html">Earphones</a>
         </div>
 
         <button class="cart">
+        
             <img src="/images/Combined Shape.png" alt="Store icon" />
+        
         </button>
       </nav>
     </div>
+
     <div class="cart-interior">
       <div class = "head">
         <h6 class = "cartCount"></h6>
@@ -54,16 +56,13 @@
         </div>
       <div class="shopping-cart">
       
-        <ul class="shopping-carts"></ul>
+        <ul class="shopping carts"></ul>
         
       </div>
       <div class = "total"><h6>Total</h6><span></span></div>
-      <div class = "checkout"><a href="../checkout.html">Checkout</a></div>
+      <div class = "checkout"><a>Checkout</a></div>
 
     </div>
-    
-    
-  
     <div class="products-menu">
         <a href="/headphones/headphones.html" class="containers">
           <img
@@ -92,169 +91,101 @@
         </a>
       </div>
     </div>
-    <header></header>
+    
+
+    <div class="purchase-confirm">
+      <div class="sign">
+        <img src="/images/check-sign.png" alt="Check symbol">
+      </div>
+      <h1>Thank you for your order</h1>
+      <p>You will receive an email confirmation shortly.</p>
+      <div class="back-home">
+        <a href="/index.html">Back to home</a>
+      </div>
+    </div>
 
 
     <div class="wrapper">
+      <div class="go-back">
+        <a href="/index.html">Go Back</a>
+      </div>
         <main>
-            <div class="go-back">
-              <a href="headphones.html">Go Back</a>
-            </div>
-            <div class="product-info" data-product-id = "1">
-              <div class="img">
-                <img class="test" src="/images/mark2.png" alt="XX99 Mark2 Headphones" />
-              </div>
-      
-              <div class="product-info-content"  >
-                <span>New Product</span>
-                <h2>XX99 Mark II Headphones</h2>
-                <p>
-                  The new XX99 Mark II headphones is the pinnacle of pristine audio.
-                  It redefines your premium headphone experience by reproducing the
-                  balanced depth and precision of studio-quality sound.
-                </p>
-                <div class="price">$ <span class="price-value">2,999</span> </div>
-                <div class="quantity">
-                  <div class="quant">
-                    <div class="decrement-itm"><span class="decrement">-</span></div>
-      
-                    <input
-                      type="number"
-                      inputmode="numeric"
-                      value="1"
-                      class="number"
-                    />
-                    <div class="increment-itm"><span class="increment">+</span></div>
+            <div class="left-side">
+                <h1>Checkout</h1>
+                <h2>Billing details</h2>
+                <div class="name-mail">
+                  <div class="name">
+                    <h3>Name</h3>
+                    <input type="text" placeholder="Alexei Ward" class="buyers-name">
                   </div>
-              
-                  <button class="btn addToCart"> add to cart</button>
-                </div>
-              </div>
-            </div>
-            <div class="features">
-              <div class="features-content">
-                <h3>features</h3>
-                <p>
-                  Featuring a genuine leather head strap and premium earcups, these
-                  headphones deliver superior comfort for those who like to enjoy
-                  endless listening. It includes intuitive controls designed for any
-                  situation. Whether you’re taking a business call or just in your own
-                  personal space, the auto on/off and pause features ensure that
-                  you’ll never miss a beat.
-                </p>
-                <br>
-                <p class="second">
-                
-                  The advanced Active Noise Cancellation with built-in equalizer allow
-                  you to experience your audio world on your terms. It lets you enjoy
-                  your audio in peace, but quickly interact with your surroundings
-                  when you need to. Combined with Bluetooth 5. 0 compliant
-                  connectivity and 17 hour battery life, the XX99 Mark II headphones
-                  gives you superior sound, cutting-edge technology, and a modern
-                  design aesthetic.
-                </p>
-              </div>
-              <div class="box-features">
-                <h3>in the box</h3>
-                <ul>
-                  <li><span>1x</span> Headphone Unit</li>
-                  <li><span>2x</span> Replacement Earcups</li>
-                  <li><span>1x</span> User Manual</li>
-                  <li><span>1x</span> 3.5mm 5m Audio Cable</li>
-                  <li><span>1x</span> Travel Bag</li>
-                </ul>
-              </div>
-            </div>
-            <div class="imges">
-              <div class="smaller">
-                <div class="small1">
-                  <img src="/images/small-guy.png" alt="Man listening to music" />
-                </div>
-                <div class="small2">
-                  <img src="/images/stuff.png" alt="Headphones on the table" />
-                </div>
-              </div>
-              <div class="xx59-small">
-                <img
-                  src="/images/xx59-small.png"
-                  alt="xx59 headphones in the background"
-                />
-              </div>
-            </div>
-            <div class="suggestions">
-              <h3>You may also like</h3>
-              <div class="suggestion">
-                <div class="suggestion1">
-                  <div class="wrap">
-                    <img src="/images/suggestion1.png" alt="XX99-mark1 headphones" />
-                  </div>
-                  <h4>XX99 MARK I</h4>
-                  <div class="btn">
-                    <a href="/headphones/xx99-mark1.html">See product</a>
+                  <div class="mail" >
+                    <h3>Email Adress</h3>
+                    <input type="email"placeholder ="alexei@mail.com" class="buyers-mail">
                   </div>
                 </div>
-                <div class="suggestion2">
-                  <div class="wrap">
-                    <img src="/images/suggestion2.png" alt="xx59 headphones" />
+                <div class="phone-number">
+                  <h3>Phone Number</h3>
+                  <input type="number" placeholder="1 202-555-0136" class="buyers-phone">
+                </div>
+                <h2 class="shopping-info">Shopping Info</h2>
+                <div class="shopping-details">
+                  <h3>Address</h3>
+                  <input type="text" placeholder="1137 Williams Avenue" class="address">
+                </div>
+                <div class="zip-city">
+                  <div class="zip">
+                    <h3>ZIP Code</h3>
+                    <input type="number" placeholder="10001" class="buyers-zip">
                   </div>
-                  <h4>XX59</h4>
-                  <div class="btn">
-                    <a href="/headphones/xx-59.html">See product</a>
+                  <div class="city" >
+                    <h3>City</h3>
+                    <input type="text"placeholder ="New York" class="buyers-city">
                   </div>
                 </div>
-                <div class="suggestion3">
-                  <div class="wrap">
-                    <img src="/images/suggestion3.png" alt="ZX9 speaker" />
-                  </div>
-                  <h4>ZX9 speaker</h4>
-                  <div class="btn">
-                    <a href="/speakers/speakers.html">See product</a>
+                <div class="country">
+                  <h3>Country</h3>
+                  <input type="text" placeholder="United States" class="buyers-country">
+                </div>
+                <div class="payment-details">
+                  <h2>Payment Details</h2>
+                </div>
+               
+                <div class="payment-method">
+                  <div class="method"><h3>Payment Method</h3></div>
+                  <div class="options">
+                    <div class="radio1">
+                      <input type="radio" class="button1" >
+                      <h4>e-Money</h4>
+                    </div>
+                    <div class="radio2">
+                      <input type="radio" class="button2">
+                      <h4>Cash on Delivery</h4>
+                    </div> 
                   </div>
                 </div>
+                <div class="money-pin">
+                  <div class="e-money">
+                    <h3>e-Money Number</h3>
+                    <input type="number" placeholder="238521993" class="eMoneyNumber">
+                  </div>
+                  <div class="pin">
+                    <h3>e-Money PIN</h3>
+                    <input type="number" placeholder="6891" class="eMoneyPin">
+                  </div>
+                </div>
+            </div>
+            <div class="right-side">
+              <h5>Summary</h5>
+              <div class="final-interior">
+                <div class="final-cart">
+                  <ul class="final-carts"></ul>
+                  
+                </div>
+                <div class = "grand-total"><h6>Total</h6><span></span></div>
+                <button class = "pay">Continue & pay</button>
+          
               </div>
-            </div>
-      
-            <div class="products">
-              <a href="/headphones/headphones.html" class="containers">
-                <img
-                  src="/images/headphones.png"
-                  alt="Headphones"
-                  class="headphones"
-                />
-                <div class="headphone">
-                  <h6>Headphones</h6>
-                  <div class="store">Shop <span class="arrow">></span></div>
-                </div>
-              </a>
-              <a href="/speakers/speakers.html" class="containers">
-                <img src="/images/speakers.png" alt="Speakers" class="speakers" />
-                <div class="speaker">
-                  <h6>Speakers</h6>
-                  <div class="store">Shop <span class="arrow">></span></div>
-                </div>
-              </a>
-              <a href="/earphones/earphones.html" class="containers">
-                <img src="/images/earphones.png" alt="Earphones" class="earphones" />
-                <div class="earphone">
-                  <h6>Earphones</h6>
-                  <div class="store">Shop <span class="arrow">></span></div>
-                </div>
-              </a>
-            </div>
-      
-            <div class="description">
-              <div class="description-content">
-                <h2>Bringing you the <span>best</span> audio gear</h2>
-                <p>
-                  Located at the heart of New York City, Audiophile is the premier
-                  store for high end headphones, earphones, speakers, and audio
-                  accessories. We have a large showroom and luxury demonstration rooms
-                  available for you to browse and experience a wide range of our
-                  products. Stop by our store to meet some of the fantastic people who
-                  make Audiophile the best place to buy your portable audio equipment.
-                </p>
-              </div>
-            </div>
+            
           </main>
           <footer>
             <nav class="foot-nav">

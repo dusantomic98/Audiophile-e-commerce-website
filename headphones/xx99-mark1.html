@@ -42,12 +42,24 @@
           <a href="/earphones/earphones.html">Earphones</a>
         </div>
 
-        <div class="cart">
-          <a href="/">
+        <button class="cart">
             <img src="/images/Combined Shape.png" alt="Store icon" />
-          </a>
-        </div>
+        </button>
       </nav>
+    </div>
+    <div class="cart-interior">
+      <div class = "head">
+        <h6 class = "cartCount"></h6>
+        <button class = "remove">Remove all</button>
+        </div>
+      <div class="shopping-cart">
+      
+        <ul class="shopping carts"></ul>
+        
+      </div>
+      <div class = "total"><h6>Total</h6><span></span></div>
+      <div class = "checkout"><a href="../checkout.html">Checkout</a></div>
+
     </div>
     <div class="products-menu">
         <a href="/headphones/headphones.html" class="containers">
@@ -85,12 +97,12 @@
             <div class="go-back">
               <a href="headphones.html">Go Back</a>
             </div>
-            <div class="product-info">
+            <div class="product-info" data-product-id = "2">
               <div class="img">
                 <img src="/images/mark1.png" alt="XX99 Mark1 Headphones" />
               </div>
       
-              <div class="product-info-content" data-product-id = "2">
+              <div class="product-info-content" >
                 <h2>XX99 Mark I Headphones</h2>
                 <p>
                     As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate
@@ -110,9 +122,9 @@
                     />
                     <div class="increment-itm"><span class="increment">+</span></div>
                   </div>
-                  <div class="btn">
-                    <a href="/">add to cart</a>
-                  </div>
+                  <button class="btn addToCart">
+                    add to cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -292,5 +304,6 @@
           </footer>
     </div>
     <script src="../transition.js"></script>
+    <script src="../cart.js"></script>
   </body>
 </html>

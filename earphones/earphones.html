@@ -44,13 +44,25 @@
           <a href="/earphones/earphones.html">Earphones</a>
         </div>
 
-        <div class="cart">
-          <a href="/">
-            <img src="/images/Combined Shape.png" alt="Store icon" />
-          </a>
-        </div>
+        <button class="cart">
+          <img src="/images/Combined Shape.png" alt="Store icon" />
+        </button>
       </nav>
       <hr />
+      <div class="cart-interior">
+        <div class="head">
+          <h6 class="cartCount"></h6>
+          <button class="remove">Remove all</button>
+        </div>
+        <div class="shopping-cart">
+          <ul class="shopping carts"></ul>
+        </div>
+        <div class="total">
+          <h6>Total</h6>
+          <span></span>
+        </div>
+        <div class="checkout"><a href="../checkout.html">Checkout</a></div>
+      </div>
       <div class="products-menu">
         <a href="/headphones/headphones.html" class="containers">
           <img
@@ -108,7 +120,7 @@
         </div>
 
         <div class="products">
-          <a href="headphones.html" class="containers">
+          <a href="/headphones/headphones.html" class="containers">
             <img
               src="/images/headphones.png"
               alt="Headphones"
@@ -217,5 +229,6 @@
       </footer>
     </div>
     <script src="../transition.js"></script>
+    <script src="../cart.js"></script>
   </body>
 </html>
